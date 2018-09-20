@@ -32,7 +32,7 @@ layer {
     }
 }
 ```
-So far, GPU only.
+So far, **GPU only**.
 
 ### 2-bit Activation Quantization
 Please refer to [wps712](https://github.com/wps712/Two-Step-Quantization-AlexNet).
