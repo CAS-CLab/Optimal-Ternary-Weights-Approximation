@@ -93,7 +93,7 @@ void TernaryInnerProductLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bo
     caffe_gpu_gemm<Dtype>(CblasNoTrans,
                           transpose_ ? CblasNoTrans : CblasTrans,
                           M_, N_, K_, (Dtype)1.,
-                          bottom_data, weight, (Dtype)0., top_data);
+                          bottom_data, ternary_weights, (Dtype)0., top_data);
     if (bias_term_)
       caffe_gpu_gemm<Dtype>(CblasNoTrans, CblasNoTrans, M_, N_, 1, (Dtype)1.,
                             bias_multiplier_.gpu_data(),
